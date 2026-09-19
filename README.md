@@ -20,6 +20,6 @@ A steward, observer or platform admin can export a project's trail from RRL (JSO
 node scripts/verify-trail.mjs <export.json> --public syntrociety/rrl-trail-anchors
 ```
 
-The script is in the RRL repository. It recomputes both hash chains, the revisions and the audit log, and compares every anchor in the export with the line published here. Commits are made through the GitHub API and signed by GitHub, and this branch refuses force pushes and deletion.
+The script is in the RRL repository. It recomputes both hash chains, the revisions and the audit log, and compares every anchor in the export with the line published here. Commits are made through the GitHub API with a token that can write to this repository only. They are not signed; the evidence comes from the branch refusing force pushes and deletion, from GitHub's commit history and timestamps, and from every clone anyone makes.
 
 Background: RFC-009 and ADR-014 in the RRL repository.
